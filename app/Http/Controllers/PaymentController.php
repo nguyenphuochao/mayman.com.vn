@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 use Cart;
+use Illuminate\Support\Facades\Mail;
 
 class PaymentController extends Controller
 {
@@ -40,6 +41,7 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
+
         $customer = new Customer();
         $customer->first_name = $request->first_name;
         $customer->last_name = $request->last_name;
@@ -65,6 +67,24 @@ class PaymentController extends Controller
             $order_detail->qty = $item->qty;
             $order_detail->price = $item->price;
             $order_detail->save();
+        }
+        // Gửi mail mua hàng
+        try {
+            $fullname = $request->last_name . ' ' . $request->first_name;
+            Mail::send('email.order', ['name' => $fullname, 'email' => $request->email, 'phone' => $request->phone, 'address' => $request->address], function ($message) use ($request) {
+                //$message->from('john@johndoe.com', 'John Doe');
+                //$message->sender('john@johndoe.com', 'John Doe');
+                $message->to($request->email, $request->first_name);
+                //$message->cc('john@johndoe.com', 'John Doe');
+                $message->bcc('nguyenphuochao456@gmail.com', 'Hao Nguyen');
+                //$message->replyTo('john@johndoe.com', 'John Doe');
+                $message->subject('Thông tin hóa đơn mua hàng');
+                //$message->priority(3);
+                //$message->attach('pathToFile');
+            });
+        } catch (\Throwable $e) {
+            // return redirect()->back()->with(['mess' => $e->getMessage(), 'type' => 'danger']);
+            dd($e->getMessage());
         }
         Cart::destroy();
         return redirect()->route('fe.order-received');

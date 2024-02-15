@@ -13,10 +13,18 @@
     <meta property="og:description"
         content="Trực tiếp kết quả xổ số kiến thiết toàn quốc | Phong Thủy Và Đời Sống - Bán Hàng Uy Tín Nhất Việt Nam">
     <meta name="keywords" content="Đồ phong thủy">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1080">
-    <meta property="og:image:height" content="400">
-    <meta property="og:image" content="{{ asset('assets/image/logo.png') }}" />
+    @if (Route::currentRouteName() == 'fe.home')
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1080">
+        <meta property="og:image:height" content="800">
+        <meta property="og:image" content="{{ asset('assets/image/logo.png') }}" />
+    @else
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1080">
+        <meta property="og:image:height" content="550">
+        <meta property="og:image" content="{{ asset('') }}admin/image/product/{{ $product->image ?? '' }}" />
+    @endif
+
     <link rel="shortcut icon" href="{{ asset('assets/image/logo.png') }}" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
@@ -37,6 +45,7 @@
 </head>
 
 <body>
+
     <!-- Top menu -->
     <div class="bg-purple">
         <div class="container top-menu justify-content-between align-items-center top-menu-desktop">
