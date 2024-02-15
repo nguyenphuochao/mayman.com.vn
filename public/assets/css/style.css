@@ -1,0 +1,524 @@
+/* Reset css */
+span p div {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Default text */
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+/* Default i */
+i.fa-angle-down,
+i.fa-angle-up,
+i.fa-circle-xmark {
+    cursor: pointer;
+}
+
+/* Root font-size */
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-25 {
+    font-size: 25px;
+}
+
+/* Root font-weight */
+.fw-500 {
+    font-weight: 500;
+}
+
+/* Root color */
+.text-red {
+    color: #B22222;
+}
+
+.text-grey {
+    color: #B6B6B6;
+}
+
+.bg-red {
+    background-color: #B22222;
+}
+
+.bg-grey {
+    background-color: #F4F4F4;
+}
+
+.bg-purple {
+    background-color: #30041B;
+}
+
+/* Top menu */
+.top-menu-desktop {
+    display: flex;
+}
+
+.top-menu #search_form {
+    position: relative;
+}
+
+.top-menu input[type=text] {
+    width: 540px;
+    height: 48px;
+}
+
+.top-menu .list-search-product {
+    background: white;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    z-index: 999999;
+    height: 562px;
+    overflow-y: scroll
+}
+
+.top-menu #fa-magnifying-glass {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.top-menu .contact-phone {
+    cursor: pointer;
+}
+
+.top-menu i.fa-phone {
+    font-size: 25px;
+}
+
+/* Menu desktop */
+nav.nav-desktop {
+    position: sticky;
+    top: 0px;
+    z-index: 100000;
+    margin-bottom: -16px;
+    height: 40px;
+}
+
+nav.nav-desktop ul>li {
+    list-style: none;
+    line-height: 40px;
+}
+
+nav.nav-desktop ul li>a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 16px;
+}
+
+nav.nav-desktop ul li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+nav.nav-desktop ul li.dropdown-menu-parent {
+    position: relative;
+}
+
+nav.nav-desktop ul li.dropdown-menu-parent>ul {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    background: white;
+    width: 240px;
+    border-radius: 3px;
+    padding: 0px;
+    display: none;
+}
+
+nav.nav-desktop ul li.dropdown-menu-parent ul li {
+    border-bottom: 1px solid rgb(234, 228, 228);
+    padding: 0;
+}
+
+nav.nav-desktop ul li.dropdown-menu-parent:hover ul {
+    display: block;
+}
+
+nav.nav-desktop ul li.dropdown-menu-parent ul li a {
+    width: 100%;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(75, 72, 72);
+}
+
+/* cart move form top-meu to nav-desktop */
+.nav-desktop i.fa-cart-shopping {
+    font-size: 25px;
+}
+
+.nav-desktop .dropdown-cart {
+    position: relative;
+}
+
+.nav-desktop .dropdown-cart .list-cart {
+    position: absolute;
+    z-index: 1000000;
+    left: -200px;
+    width: 322px;
+    padding: 5px;
+    display: none;
+    background-color: white;
+    border: 1px solid rgb(218, 207, 207);
+}
+
+.nav-desktop .dropdown-cart:hover .list-cart {
+    display: block;
+}
+
+.nav-desktop .dropdown-cart .list-cart hr {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Menu mobile */
+.nav-mobile {
+    display: none;
+}
+
+.nav-mobile i.fa-cart-shopping {
+    font-size: 25px;
+}
+
+.nav-mobile .cart-mobile {
+    position: absolute;
+    background: red;
+    left: -12px;
+    border-radius: 50%;
+    color: white;
+    top: -11px;
+    font-weight: 700;
+    height: 27;
+    width: 27px;
+    text-align: center;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 18px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.nav-mobile .menu-mobile-child {
+    margin-left: -18px;
+    display: none;
+}
+
+.nav-mobile .menu-mobile-child li {
+    list-style: none;
+}
+
+/* Banner */
+.owl-carousel .item img {
+    height: 550px;
+}
+
+.owl-carousel .owl-next {
+    top: 50%;
+    right: 10px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.owl-carousel .owl-prev {
+    top: 50%;
+    left: 10px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.owl-carousel .owl-next span,
+.owl-carousel .owl-prev span {
+    font-size: 70px;
+    color: white;
+}
+
+.owl-carousel .owl-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+}
+
+/* Sổ số kiến thiết */
+.kqxs .product img {
+    width: 100%;
+    height: 120px;
+}
+
+.kqxs #iframe_xosominhngoc {
+    height: 1200px;
+}
+
+/* Info Company */
+.info-company {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    padding: 15px;
+}
+
+.info-company i {
+    font-size: 33px;
+}
+
+/* List Product */
+.banner-full img {
+    height: 350px;
+}
+
+.list-product {
+    background-color: #F4F4F4;
+}
+
+.list-product .title,
+.list-news .title {
+    position: relative;
+}
+
+.list-product .title h3,
+.list-news .title h3 {
+    border: 2px solid #9f9b9b;
+    padding: 5px;
+    z-index: 999;
+    background-color: white;
+}
+
+.list-product .title::before,
+.list-news .title::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 65%;
+    border: 1px solid #9f9b9b;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-55%);
+}
+
+.list-product .row .col .product {
+    background-color: white;
+    padding: 15px 10px 25px 10px;
+    position: relative;
+}
+
+.list-product .row .col .product .discount {
+    position: absolute;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    padding-top: 10px;
+    top: -7px;
+    left: -7px;
+}
+
+.list-product .products .product a {
+    text-decoration: none;
+    color: white;
+}
+
+.list-product .products .product img {
+    height: 200px;
+}
+
+.list-product .products .product .text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+/* Footer */
+footer ul li {
+    list-style: disc;
+    margin-top: 5px;
+}
+
+footer ul li a {
+    color: white;
+    font-size: 15px;
+}
+
+footer ul li a:hover {
+    color: rgb(167, 161, 161);
+    text-decoration: none;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    background-color: #212121;
+    padding: 10px;
+}
+
+.footer-bottom div {
+    color: white;
+    font-size: 14px;
+}
+
+/* Reponsive */
+@media screen and (max-width: 1199px) {
+    .top-menu input[type=text] {
+        width: 382px;
+    }
+
+    nav.nav-desktop {
+        height: auto;
+    }
+
+    nav.nav-desktop ul>li {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .top-menu input[type=text] {
+        width: 345px;
+    }
+
+    .kqxs .title {
+        font-size: 12px;
+    }
+
+    .kqxs .product img {
+        height: 80px;
+    }
+
+    .kqxs #iframe_xosominhngoc {
+        height: 1000px;
+    }
+
+    .list-product .title::before,
+    .list-news .title::before {
+        top: 30px;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .top-menu-desktop {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .owl-carousel .item img {
+        height: 300px;
+    }
+
+    .banner-full img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .owl-carousel .item img {
+        height: 180px;
+    }
+
+    .owl-carousel .owl-next span,
+    .owl-carousel .owl-prev span {
+        font-size: 40px;
+    }
+
+    .banner-full img {
+        height: 150px;
+    }
+
+    #iframe_xosominhngoc {
+        width: 100%;
+    }
+
+    #pagesheet #noidung {
+        width: 310px !important
+    }
+
+    .list-product .title h3,
+    .list-news .title h3 {
+        font-size: 16px;
+    }
+
+    .list-product .title::before,
+    .list-news .title::before {
+        display: none;
+    }
+
+    .list-product .products .product img {
+        height: 150px;
+    }
+
+    .list-product .home-price-mobile {
+        padding-top: 25px;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 13px;
+    }
+}
